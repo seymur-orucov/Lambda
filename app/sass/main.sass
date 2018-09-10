@@ -2,42 +2,43 @@
 @import "fonts"
 @import "libs"
 
-::placeholder
-	color: #666
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
 
-::selection
-	background-color: $accent
-	color: #fff
+ul, li
+    display: block
+    list-style: none
+    margin: 0
+    padding: 0
 
-body
-	font-size: 16px
-	min-width: 320px
-	position: relative
-	line-height: 1.65
-	font-family: $default-font
-	overflow-x: hidden
-	color: $text
-	input, textarea
-		border: #666 1px solid
-		outline: none
-		&:focus:required:invalid
-			border-color: red
-		&:required:valid
-			border-color: green
+h1, h2, h3, h4, h5, h6, p, span
+    margin: 0
+    padding: 0
 
-.img-responsive
-	display: block
-	max-width: 100%
-	height: auto
-	&.img-width
-		width: 100%
+html, body
+    font-size: 14px
+    overflow-x: hidden
 
-.text-center
-	text-align: center
+.header
+    height: 110px
 
-b, strong
-	font-weight: bold
+    &__nav
+        display: flex
 
+    &__logo
+        background-image: url(/img/logo.png)
+        background-size: cover
+        background-position: center center
+        width: 156px
+        height: 92px
+        display: block
+    
+    &__menu-list
+        display: flex
+
+    
 
 
 @import "media" // Always at the end
