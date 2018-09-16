@@ -7,6 +7,9 @@
     box-sizing: border-box
     margin: 0
     padding: 0
+    &::selection
+        color: #000
+        background: $gold
 
 ul, li
     display: block
@@ -23,6 +26,14 @@ html, body
     overflow-x: hidden
     position: relative
 
+.m-auto
+    margin: 0 auto!important
+
+.ml-auto
+    margin-left: auto!important
+
+.mr-auto
+    margin-right: auto!important
 
 .red
     border: 1px solid red
@@ -32,6 +43,7 @@ html, body
     box-shadow: inset 0 10rem 6rem -5rem rgba(0,0,0,.5)
     width: 100%
     position: fixed
+    z-index: 9999
 
     &__nav
         display: flex
@@ -100,6 +112,24 @@ html, body
     display: flex
     justify-content: center
     align-items: center
+    position: relative
+    
+    &__video
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        overflow: hidden
+        &-overlay
+            position: absolute
+            width: 100%
+            height: 100vh
+            background-color: rgba(0,0,0,.2)
+        &-promo
+            width: 100%
+            height: 100vh
+            object-fit: cover;
 
     &__slogan
         text-align: center
@@ -108,9 +138,11 @@ html, body
         &:after
             content: ''
             display: block
-            width: 232px
-            height: 43px
+            width: 23.2rem
+            height: 4.3rem
             background-image: url(/img/decor-white.png)
+            background-size: cover
+            background-repeat: no-repeat
             margin: 0 auto
             margin-top: 1rem
         &-text
@@ -141,9 +173,371 @@ html, body
                 border: 1px solid $gold            
 /*======== /Intro page/ ========*/
 
-    
+/*======== About ========*/
+.about
+    display: flex
+    align-items: center
+    height: 100vh
+    background-image: url(/img/pattern1.jpg)
+    background-position: center center
+    box-shadow: inset -25rem 0 70rem -20rem rgba(0,0,0,.3)
 
+    &__block
+        padding: 10rem 0 5rem 0
+
+    &__text
+        padding-bottom: 5.2rem
+        &-title
+            font-family: YO_R
+            font-size: 3.6rem
+            font-weight: 400
+            color: $gold
+            text-align: center
+            &:after
+                content: ''
+                background-image: url(/img/decor-gold.png)
+                background-repeat: no-repeat
+                display: block
+                width: 24.7rem
+                height: 2.4rem
+                margin: 1.5rem auto 3rem
+        &-desc
+            font-family: Lato_R
+            font-size: 1.6rem
+            font-weight: 400
+            line-height: 2.4rem
+            color: $text
+            text-align: center
+
+    &__image
+        display: flex
+        justify-content: center
+        &-chef
+            max-width: 100%
+        
+    &__food
+        margin-top: -2rem
+        &-image
+            max-width: 100%
+/*======== /About/ ========*/
+
+/*======== Ingredients ========*/
+.ingredients
+    display: flex
+    align-items: center
+    height: 100vh
+    background-image: url(/img/bg-ingredients.jpg)
+    background-attachment: fixed
+    background-size: cover
     
+    &__block
+        background-color: rgba(0,0,0,.67)
+        box-shadow: 0px 0px 5px 2px rgba(0,0,0,.8)
+        padding: 8rem 0
+    
+    &__info
+        padding-bottom: 7rem
+        margin: 0 auto!important
+        &-title
+            font-family: YO_R
+            font-size: 3.6rem
+            font-weight: 400
+            color: $white
+            text-align: center
+            &:after
+                content: ''
+                background-image: url(/img/decor-ingredients.png)
+                background-repeat: no-repeat
+                display: block
+                width: 24.7rem
+                height: 2.4rem
+                margin: 1.5rem auto 3rem
+        &-desc
+            font-family: Lato_R
+            font-size: 1.6rem
+            font-weight: 400
+            line-height: 2.4rem
+            color: $white
+            text-align: center
+            width: 41rem
+            max-width: 100%
+            margin: 0 auto
+    
+    &__image
+        margin: 0 auto!important
+        &-list
+            display: flex
+            justify-content: space-around
+        &-item
+            box-shadow: 0px 0px 0px 5px rgba(255,255,255,.09)
+            border-radius: 80px
+            width: 10rem
+            height: 10rem
+            background-size: cover
+            background-repeat: no-repeat
+            &:nth-child(1)
+                background-image: url(/img/ingredients-1.png)
+            &:nth-child(2)
+                background-image: url(/img/ingredients-2.png)
+            &:nth-child(3)
+                background-image: url(/img/ingredients-3.png)    
+/*======== /Ingredients/ ========*/
+
+/*======== Menu ========*/
+.menu
+    display: flex
+    align-items: center
+    background-image: url(/img/pattern2.jpg)
+    background-position: center center
+    // box-shadow: inset -25rem 0 70rem -20rem rgba(0,0,0,.2)
+   
+    &__block
+        padding: 10rem 0
+        justify-content: space-around
+
+    &__info
+        &-title
+            font-family: YO_R
+            font-size: 3.6rem
+            font-weight: 400
+            color: $gold-dark
+            text-align: center
+            &:after
+                content: ''
+                background-image: url(/img/decor-gold.png)
+                background-repeat: no-repeat
+                display: block
+                width: 24.7rem
+                height: 2.4rem
+                margin: 1.5rem auto 3rem
+        &-desc
+            font-family: Lato_R
+            font-weight: 400
+            font-size: 1.4rem
+            line-height: 2.4rem
+            color: $text
+            &:before
+                content: ''
+                display: block
+                width: 100%
+                border: 0.5px solid rgba(#c89f2d, .2)
+                margin: 0.5rem 0
+        &-name
+            font-family: YO_R
+            font-size: 2.1rem
+            line-height: 2.4rem
+            font-weight: 400
+            color: $gold-dark
+            display: inline-flex
+        &-price
+            @extend .menu__info-name
+            position: relative
+            &:before
+                content: ''
+                background-image: url(/img/menu-currency.png)
+                width: 13px
+                height: 18px
+                position: absolute
+                top: 2px
+                left: -15px
+        &-special
+            position: absolute
+            font-family: Lato_R
+            font-size: 1.4rem
+            font-weight: 400
+            color: $white
+            background-image: url(/img/bg-special.png)
+            top: -2.8rem
+            right: -0.1rem
+            padding: .3rem 1.3rem
+        &-item
+            margin-bottom: 3rem
+            &_special
+                border: 1px solid rgba(#c89f2d, .5)
+                padding: 0.8rem 1.2rem
+                position: relative
+            &-head
+                display: flex
+                justify-content: space-between
+/*======== /Menu/ ========*/
+
+/*======== Reviews ========*/
+.reviews
+    @extend .ingredients
+    background-image: url(/img/bg-reviews.jpg)
+    background-position: center center
+
+    &__block
+        @extend .ingredients__block
+        margin: 0 auto
+    
+    &__info
+        @extend .ingredients__info
+        text-align: center
+        padding-bottom: 2rem
+        &-author
+            font-family: Lato_R
+            font-size: 1.8rem
+            font-weight: 400
+            color: $white
+        &-title
+            @extend .ingredients__info-title
+        &-desc
+            font-family: GBB_R
+            font-size: 2.5rem
+            font-weight: 400
+            line-height: 4.5rem
+            color: $white
+            text-align: center
+            position: relative
+            padding-bottom: 5rem
+            &:after
+                content: '\201C'
+                display: block
+                color: rgba(#f2f4f4, .4)
+                font-size: 9.6rem
+                position: absolute
+                font-family: YO_R
+                top: 0.8rem
+                left: -4rem
+/*======== /Reviews/ ========*/
+
+/*======== Reservations ========*/
+.reservations
+    display: flex
+    align-items: center
+    // height: 100vh
+    background-image: url(/img/pattern1.jpg)
+    background-position: center center
+    padding: 10rem 0
+    // box-shadow: inset -25rem 0 70rem -20rem rgba(0,0,0,.5)
+
+    &__text
+        @extend .about__text
+        padding-bottom: 2rem
+        margin-top: -2rem
+        &-title
+            @extend .about__text-title
+        &-desc
+            @extend .about__text-desc
+
+    &__image
+        width: 100%
+        @include transition(.4s)
+        &:hover
+            transform: scale(1.1)
+
+    &__form
+        display: flex
+        flex-flow: wrap
+        &-block
+            padding-bottom: 2rem
+            &:nth-child(3)
+                &:after
+                    content: '\e800'
+                    font-family: fontello
+                    font-size: 1.4rem
+                    color: #7c7c7c
+                    position: absolute
+                    top: 3.5rem
+                    right: 2rem
+            &_center
+                text-align: center
+            &:nth-child(4)
+                &:after
+                    content: ''
+                    color: #7c7c7c
+                    position: absolute
+                    top: 3.8rem
+                    right: 1.8rem
+                    width: 1rem
+                    height: 1rem
+                    border-bottom: 3px solid #7c7c7c
+                    border-right: 3px solid #7c7c7c
+                    transform: rotate(45deg)
+        &-name
+            font-family: OS_B
+            font-size: 1.4rem
+            font-weight: 700
+            color: $gold-dark
+        &-input
+            height: 3.7rem
+            width: 20rem
+            border: 1px solid rgba($text, .5)
+            background-color: $white
+            font-family: OP_R
+            font-weight: 400
+            font-style: italic
+            font-size: 1.6rem
+            color: $text
+            padding: 1rem 0 1rem 1.6rem
+            position: relative
+            &:hover
+                border: 1px solid #c89f2d
+            &:focus
+                outline: none
+                border: 1px solid #c89f2d
+        &-button
+            background-color: $gold
+            border: 1px solid $gold
+            padding: .6rem 5rem
+            font-family: OS_R
+            font-size: 1.6rem
+            color: $white
+            font-weight: 400
+            @include transition(.2s)
+            &:hover
+                cursor: pointer
+                background-color: rgba($text,.5)
+/*======== /Reservations/ ========*/
+
+/*======== Footer ========*/
+.footer
+    background-color: #191919
+    padding: 5.2rem 0
+
+    &__block
+        justify-content: space-between
+    
+    &__info
+        text-align: center
+        &-title
+            font-family: YO_R
+            font-weight: 400
+            font-size: 2.1rem
+            color: $footer
+            &:after
+                @extend .ingredients__info-title:after
+                width: 20rem
+                height: 2rem
+                background-size: cover
+        &-desc
+            font-family: OS_R
+            font-size: 1.6rem
+            font-weight: 400
+            line-height: 2.4rem
+            color: $footer
+            &_bold
+                font-weight: 700
+    
+    &__icons
+        &-list
+            display: flex
+            justify-content: center
+        &-items
+            padding: 5rem .5rem 0
+        &-link
+            @extend .footer__icons-font
+        &-font
+            font-size: 1.6rem
+            color: $white
+            @include transition(.2s)
+            &:hover
+                color: $gold
+                cursor: pointer
+/*======== /Footer/ ========*/
+
+
 
 
 @import "media" // Always at the end

@@ -21,7 +21,9 @@
     "gulp-uglify": "^3.0.1",
     "gulp-util": "^3.0.8"
   },
-  "dependencies": {},
+  "dependencies": {
+    "mdbootstrap": "^4.5.10"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/agragregra/OptimizedHTML-4.git"
