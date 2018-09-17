@@ -1,32 +1,214 @@
-@import "vars"
+@import "vars";
 
 
 /*==========  Desktop First  ==========*/
 
 // ≥1200px
-@include media-breakpoint-down(lg)
-.intro__button-link
-    color: #000
++media-breakpoint-down(lg) 
+    html
+        font-size: 9px
+    
+    .header
+
+        &__logo
+            width: 15.6rem
+            height: 9.2rem
+
+        &__menu
+            &-item
+                margin-left: 3rem
+        
+        &__social
+            &-list
+                margin: 0 auto
+    
+    .intro
+        
+        &__slogan
+            &:after
+                margin: 2rem auto
+            &-text
+                font-size: 6rem
+        
+        &__button
+            &-link
+                padding: 1.5rem 4rem
+    
+    .about
+
+        &__food
+            margin-top: 0
+            display: flex
+            align-items: center
+            height: 100%
+    
+    .menu
+        
+        &__info
+            &-special
+                top: -2.7rem
+            &-price
+                &:before
+                    top: 0
+                    left: -2rem
+
+    .reviews
+        
+        &__info
+            &-desc
+                &:after
+                    left: -5rem
+    
+    .reservations
+
+        &__image
+            width: 25rem
+            height: 48rem
+        
+        &__form
+            &-block
+                &:nth-child(3)
+                    &:after
+                        right: 5rem
+                &:nth-child(4)
+                    &:after
+                        right: 4.8rem
+            &-input
+                height: 3.9rem
+
 // ≥992px
-@include media-breakpoint-down(md)
++media-breakpoint-down(md) 
+    html
+        font-size: 8px
+    
+    .header
+
+        &__logo
+            width: 14rem
+            height: 8rem
+    
+    .intro
+        
+        &__slogan
+            &:after
+                margin: 1.2rem auto
+            &-text
+                font-size: 5rem
+        
+        &__button
+            &-link
+                padding: 1.2rem 3.5rem
+    
+    .about
+
+        &__block
+            padding: 5rem 0 5rem 0
+
+        &__text
+            &-title
+                &:after
+                    width: 24.7rem
+                    height: 2.4rem
+        &__food
+            margin-top: 0
+            display: flex
+            align-items: center
+            height: 100%
+        
+        &__image
+            &-chef
+                width: 60%
+                height: 100%
+            
+    .reviews
+        
+        &__info
+            &-desc
+                &:after
+                    left: -5rem
+    
+    .ingredients
+
+        &__block
+            margin: 0 auto
+
+    .reservations
+
+        &__form
+            &-block
+                &:nth-child(3)
+                    &:after
+                        right: 4rem
+                &:nth-child(4)
+                    &:after
+                        right: 3.8rem
+            &-input
+                height: 3.9rem
+                width: 18rem
 
 // ≥768px
-@include media-breakpoint-down(sm)
++media-breakpoint-down(sm) 
+    .about
+        &__image
+            &-chef
+                width: 50%
+    .menu
+
+        &__info
+            &-item
+                &_special
+                    padding: .8rem 1rem
+                    margin: 0 -1rem 2.5rem
+    
+    .reservations
+        
+        &__form
+            &-input
+                width: 100%
+            &-name
+                display: block
+            &-button
+                width: 100%
+                padding: 1rem 0
+                font-size: 1.8rem
+    
+    .footer
+
+        &__block
+            display: flex
+            justify-content: center
+
+        &__info
+            padding: 2rem 0
+        
+        &__icons
+            &-items
+                padding: 0 .5rem
+
 
 // ≥576px
-@include media-breakpoint-down(xs)
++media-breakpoint-down(xs) 
+
+
 
 
 /*==========  Mobile First  ==========*/
 
 // ≤576px
-@include media-breakpoint-up(sm)
++media-breakpoint-up(sm) 
+
+
 
 // ≤768px
-@include media-breakpoint-up(md)
++media-breakpoint-up(md) 
+
+
 
 // ≤992px
-@include media-breakpoint-up(lg)
++media-breakpoint-up(lg) 
+
+
 
 // ≤1200px
-@include media-breakpoint-up(xl)
++media-breakpoint-up(xl) 
+	

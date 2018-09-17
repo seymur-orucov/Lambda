@@ -52,8 +52,8 @@ html, body
         background-image: url(/img/logo.png)
         background-size: cover
         background-position: center center
-        width: 156px
-        height: 92px
+        width: 15.6rem
+        height: 9.2rem
         display: block
         @include transition(.2s)
         &:hover
@@ -180,6 +180,7 @@ html, body
     height: 100vh
     background-image: url(/img/pattern1.jpg)
     background-position: center center
+    background-attachment: fixed
     box-shadow: inset -25rem 0 70rem -20rem rgba(0,0,0,.3)
 
     &__block
@@ -196,6 +197,7 @@ html, body
             &:after
                 content: ''
                 background-image: url(/img/decor-gold.png)
+                background-size: cover
                 background-repeat: no-repeat
                 display: block
                 width: 24.7rem
@@ -247,6 +249,7 @@ html, body
             &:after
                 content: ''
                 background-image: url(/img/decor-ingredients.png)
+                background-size: cover
                 background-repeat: no-repeat
                 display: block
                 width: 24.7rem
@@ -288,6 +291,7 @@ html, body
     display: flex
     align-items: center
     background-image: url(/img/pattern2.jpg)
+    background-attachment: fixed
     background-position: center center
     // box-shadow: inset -25rem 0 70rem -20rem rgba(0,0,0,.2)
    
@@ -305,6 +309,7 @@ html, body
             &:after
                 content: ''
                 background-image: url(/img/decor-gold.png)
+                background-size: cover
                 background-repeat: no-repeat
                 display: block
                 width: 24.7rem
@@ -338,8 +343,8 @@ html, body
                 width: 13px
                 height: 18px
                 position: absolute
-                top: 2px
-                left: -15px
+                top: .2rem
+                left: -1.5rem
         &-special
             position: absolute
             font-family: Lato_R
@@ -408,6 +413,7 @@ html, body
     align-items: center
     // height: 100vh
     background-image: url(/img/pattern1.jpg)
+    background-attachment: fixed
     background-position: center center
     padding: 10rem 0
     // box-shadow: inset -25rem 0 70rem -20rem rgba(0,0,0,.5)
@@ -472,6 +478,7 @@ html, body
             color: $text
             padding: 1rem 0 1rem 1.6rem
             position: relative
+            -webkit-appearance: none
             &:hover
                 border: 1px solid #c89f2d
             &:focus
@@ -540,4 +547,4 @@ html, body
 
 
 
-@import "media" // Always at the end
+@import "media.sass" // Always at the end
