@@ -19,6 +19,51 @@
 </head>
 <body>
 	<header class="header">
+		<div class="d-none header__bmenu">
+			<div class="header__bmenu-block">
+				<ul class="header__bmenu-list">
+					<li class="header__bmenu-item">
+						<a href="#" class="header__bmenu-link">Home</a>
+					</li>
+					<li class="header__bmenu-item">
+						<a href="#" class="header__bmenu-link">About</a>
+					</li>
+					<li class="header__bmenu-item">
+						<a href="#" class="header__bmenu-link">Igredients</a>
+					</li>
+					<li class="header__bmenu-item">
+						<a href="#" class="header__bmenu-link">Menu</a>
+					</li>
+					<li class="header__bmenu-item">
+						<a href="#" class="header__bmenu-link">Reviews</a>
+					</li>
+					<li class="header__bmenu-item">
+						<a href="#" class="header__bmenu-link">Reservations</a>
+					</li>
+					<li class="header__bmenu-item">
+						<div class="d-block header__social">
+							<ul class="header__social-list">
+								<li class="header__social-item">
+									<a href="#" class="header__social-link">
+										<i class="header__social-icon icon-twitter"></i>
+									</a>
+								</li>
+								<li class="header__social-item">
+									<a href="#" class="header__social-link">
+										<i class="header__social-icon icon-youtube"></i>
+									</a>
+								</li>
+								<li class="header__social-item">
+									<a href="#" class="header__social-link">
+										<i class="header__social-icon icon-facebook"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
 		<div class="container">
 			<div class="row">
 				<nav class="col-12 header__nav">
@@ -66,6 +111,11 @@
 							</li>
 						</ul>
 					</div>
+					<div class="d-none d-md-block d-lg-none col-md-2">
+						<div class="header__burger">
+							<span class="header__burger-line"></span>
+						</div>
+					</div>
 				</nav>
 			</div>
 		</div>
@@ -73,7 +123,7 @@
 	<!-- /.header -->
 	<main class="content">
 		<section class="intro">
-			<div class="intro__video">
+			<div class="d-none d-sm-flex intro__video">
 				<div class="intro__video-overlay"></div>
 				<video class="intro__video-promo" autoplay loop muted>
 					<source src="/video/video.mp4" type="video/mp4"><!-- MP4 для Safari, IE9, iPhone, iPad, Android, и Windows Phone 7 -->
