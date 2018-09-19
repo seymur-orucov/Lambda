@@ -44,6 +44,9 @@ html, body
     width: 100%
     position: fixed
     z-index: 9999
+    &_bg-dark
+        background-color: rgba(#000000, .8)
+        box-shadow: 0 0 0 0
 
     &__burger
         position: relative
@@ -53,42 +56,54 @@ html, body
         height: 100%
         &-line
             position: absolute
-            background-color: $white
-            height: .6rem
-            width: 8rem
+            background-color: $gold
+            height: .5rem
+            width: 6rem
             display: flex
             justify-content: center
-            @include transition(.4s)
+            @include transition(.3s)
             &:before
                 content: ''
                 position: absolute
-                background-color: $white
-                height: .6rem
-                width: 4.5rem
-                top: -1.8rem
-                @include transition(.4s)
+                background-color: $gold
+                height: .5rem
+                width: 3.3rem
+                top: -1.6rem
+                @include transition(.3s)
             &:after
                 content: ''
                 position: absolute
-                background-color: $white
-                height: .6rem
-                width: 4.5rem
-                top: 1.8rem
-                @include transition(.4s)
-
+                background-color: $gold
+                height: .5rem
+                width: 3.3rem
+                top: 1.6rem
+                @include transition(.3s)
         &:hover
             .header__burger-line
+                background-color: $white
                 &:before, &:after
                     width: 100%
-        
-                
+                    background-color: $white
 
+        .header__burger-line_close
+            width: 3.3rem
+            &:before
+                width: 6rem
+            &:after
+                width: 6rem
+        &:hover
+            .header__burger-line_close
+                width: 6rem
+                &:before, &:after
+                    width: 3.3rem
+                    background-color: $white
 
     &__bmenu
         background-image: url(/img/bg-burger.jpg)
         height: 100vh
         background-size: cover
         background-repeat: no-repeat
+        display: none
         &-block
             display: flex;
             justify-content: center
@@ -99,6 +114,12 @@ html, body
             text-align: center
         &-item
             padding: 0.8rem 0
+            &_close
+                display: block
+                height: 10rem
+                width: 6rem
+                margin: 0 auto
+                padding-bottom: 2rem
         &-link
             font-family: YO_R
             font-weight: 400
@@ -134,10 +155,12 @@ html, body
     &__logo
         background-image: url(/img/logo.png)
         background-size: cover
+        background-repeat: no-repeat
         background-position: center center
-        width: 15.6rem
+        width: 14rem
         height: 9.2rem
         display: block
+        margin: 0 auto
         @include transition(.2s)
         &:hover
             opacity: 0.7
@@ -155,6 +178,8 @@ html, body
             font-family: "GBB_B"
             font-size: 1.8rem
             color: $white
+            &_gold
+                color: $gold
             @include transition(.4s)
             &:before
                 content: ''
@@ -180,6 +205,8 @@ html, body
         &-icon
             font-size: 2rem
             color: $white
+            &_gold
+                color: $gold
             @include transition(.4s)
             &:hover
                 color: $gold
@@ -550,7 +577,7 @@ html, body
             font-weight: 700
             color: $gold-dark
         &-input
-            height: 3.7rem
+            height: 4rem
             width: 20rem
             border: 1px solid rgba($text, .5)
             background-color: $white
