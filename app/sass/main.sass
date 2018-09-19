@@ -66,6 +66,7 @@ html, body
                 height: .6rem
                 width: 4.5rem
                 top: -1.8rem
+                @include transition(.4s)
             &:after
                 content: ''
                 position: absolute
@@ -73,8 +74,13 @@ html, body
                 height: .6rem
                 width: 4.5rem
                 top: 1.8rem
+                @include transition(.4s)
 
-
+        &:hover
+            .header__burger-line
+                &:before, &:after
+                    width: 100%
+        
                 
 
 
