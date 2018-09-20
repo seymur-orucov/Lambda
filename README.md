@@ -1,2 +1,2 @@
-# Lambda
-Lambda - website template
+# Luxury restaurant
+Luxury restaurant - website template
