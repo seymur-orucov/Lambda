@@ -44,9 +44,10 @@ html, body
     width: 100%
     position: fixed
     z-index: 9999
+    @include transition(.5s)
     &_bg-dark
         background-color: rgba(#000000, .8)
-        box-shadow: 0 0 0 0
+        box-shadow: 0 0 0.5rem 0.4rem
 
     &__burger
         position: relative
