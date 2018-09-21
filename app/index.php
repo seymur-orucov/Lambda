@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<base href="https://seymur-orucov.github.io/luxury/app/">
+	<!-- <base href="https://seymur-orucov.github.io/luxury/app/"> -->
 	<title>Lambda</title>
 	<meta name="description" content="">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
